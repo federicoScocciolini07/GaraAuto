@@ -1,9 +1,9 @@
 import java.util.List;
 
-public class FileManager {
+public class GestoreFile {
     private String nomeFile;
 
-    public FileManager(String nomeFile) {
+    public GestoreFile(String nomeFile) {
         this.nomeFile = nomeFile;
     }
 
@@ -20,4 +20,3 @@ public class FileManager {
         }
     }
 }
-.

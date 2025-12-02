@@ -18,4 +18,3 @@ public class Giudice {
         return classifica;
     }
 }
-.

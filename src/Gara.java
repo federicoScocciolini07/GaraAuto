@@ -1,26 +1,39 @@
-import java.awt.desktop.SystemEventListener;
 import java.util.List;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Gara {
     private List<Partecipante> partecipanti;
     private Percorso percorso;
     private Giudice giudice;
-    private FileManager fileManager;
+    private GestoreFile gestoreFile;
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("inserisci il numero dei partecipanti");
+        System.out.println("Inserisci il numero dei partecipanti:");
         int nPartecipanti = Integer.parseInt(scanner.nextLine());
-        for (int = 0, i < 0)
-        Gara g = new Gara()
+
+        List<Partecipante> partecipanti = new ArrayList<>();
+        for (int i = 0; i < nPartecipanti; i++) {
+            System.out.println("Inserisci il nome del partecipante " + (i + 1) + ":");
+            String nome = scanner.nextLine();
+            partecipanti.add(new Partecipante(nome));
+        }
+
+        // Esempio di inizializzazione degli altri oggetti
+        Percorso percorso = new Percorso();
+        Giudice giudice = new Giudice();
+        GestoreFile gestoreFile = new GestoreFile();
+
+        Gara gara = new Gara(partecipanti, percorso, giudice, gestoreFile);
+        gara.avviaGara();
     }
 
-    public Gara(List<Partecipante> partecipanti, Percorso percorso, Giudice giudice, FileManager fileManager) {
+    public Gara(List<Partecipante> partecipanti, Percorso percorso, Giudice giudice, GestoreFile gestoreFile) {
         this.partecipanti = partecipanti;
         this.percorso = percorso;
         this.giudice = giudice;
-        this.fileManager = fileManager;
+        this.gestoreFile = gestoreFile;
     }
 
     public void avviaGara() {
@@ -29,4 +42,3 @@ public class Gara {
         }
     }
 }
-.

@@ -28,4 +28,3 @@ public class Partecipante implements Runnable {
         return distanzaPercorsa;
     }
 }
-.

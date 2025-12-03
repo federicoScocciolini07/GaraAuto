@@ -20,7 +20,8 @@ public class Gara {
             partecipanti.add(new Partecipante(nome));
         }
 
-        // Esempio di inizializzazione degli altri oggetti
+        
+    
         Percorso percorso = new Percorso();
         Giudice giudice = new Giudice();
         GestoreFile gestoreFile = new GestoreFile();
